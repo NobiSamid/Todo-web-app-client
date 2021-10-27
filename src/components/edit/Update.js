@@ -7,7 +7,7 @@ const Update = () => {
 
 
     useEffect(()=>{
-        const url = `http://localhost:5000/notes/${noteId}`;
+        const url = `https://morning-dusk-99977.herokuapp.com/notes/${noteId}`;
         fetch(url)
         .then(res =>res.json())
         .then(data => setKeep(data));
@@ -39,7 +39,7 @@ const Update = () => {
     }
 
     const handleUpdateNote = e =>{
-        const url = `http://localhost:5000/notes/${noteId}`;
+        const url = `https://morning-dusk-99977.herokuapp.com/notes/${noteId}`;
         fetch(url, {
             method:'PUT',
             headers:{

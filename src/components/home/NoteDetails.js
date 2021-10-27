@@ -7,7 +7,7 @@ const NoteDetails = () => {
 
     const [details, setDetails] = useState({});
     useEffect(()=>{
-        fetch(`http://localhost:5000/notes/${notesKey}`)
+        fetch(`https://morning-dusk-99977.herokuapp.com/notes/${notesKey}`)
         .then(res=>res.json())
         .then(data=>setDetails(data))
     },[])

@@ -5,7 +5,7 @@ const Edit = () => {
     const [notes, setNotes] = useState([]);
 
     useEffect(()=>{
-        fetch('http://localhost:5000/notes')
+        fetch('https://morning-dusk-99977.herokuapp.com/notes')
         .then(res=>res.json())
         .then(data=>setNotes(data))
     },[])
@@ -14,7 +14,7 @@ const Edit = () => {
     const handleDelete = id =>{
         const proceed = window.confirm('Are you sure, you want to delete this note');
         if(proceed){
-            const url = `http://localhost:5000/notes/${id}`;
+            const url = `https://morning-dusk-99977.herokuapp.com/notes/${id}`;
             fetch(url, {
                 method: 'DELETE'
             })

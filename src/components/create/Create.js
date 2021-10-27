@@ -8,7 +8,7 @@ const Create = () => {
     const onSubmit = data =>{
         console.log(data);
          
-        axios.post('http://localhost:5000/notes', data)
+        axios.post('https://morning-dusk-99977.herokuapp.com/notes', data)
         .then(res => {
             if(res.data.insertedId){
                 alert("Added note successfully")
